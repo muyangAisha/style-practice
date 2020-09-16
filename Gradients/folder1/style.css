@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border-box：宽度、高度包括内、外边距; content-box是默认值 */
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 480px;
+  display: flex;
+  justify-content: space-around;
+  /* ？ */
+  flex-wrap: wrap;
+}
+
+.container a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+  /* 去掉a标签的下划线 */
+  text-decoration: none;
+  /* uppercase变大写, */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.container a:nth-child(1) {
+  background: linear-gradient(to right, #a18cd1, #fbc2eb, #a18cd1);
+  /* 设置200%，但初始的时候只显示100%的颜色渐变 */
+  background-size: 200%;
+}
+.container a:nth-child(2) {
+  background: linear-gradient(to right, #43e97b, #38f9d7, #43e97b);
+  background-size: 200%;
+}
+.container a:nth-child(3) {
+  background: linear-gradient(to right, #fa709a, #fee140, #fa709a);
+  background-size: 200%;
+}
+.container a:nth-child(4) {
+  background: linear-gradient(to right, #4481eb, #04befe, #4481eb);
+  background-size: 200%;
+}
+.container a:nth-child(5) {
+  background: linear-gradient(to right, #ffe29f, #ffa99f, #ffe29f);
+  background-size: 200%;
+}
+.container a:nth-child(6) {
+  background: linear-gradient(to right, #fdfc47, #24fe41, #fdfc47);
+  background-size: 200%;
+}
+
+.container a:hover {
+  /* background-position 属性设置背景图像的起始位置。如果您仅规定了一个值，另一个值将是 50%。 */
+  background-position-x: 100%;
+  transform: translateY(-15px);
+}
+
+/* 中间竖线 */
+.container a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 按钮 */
+.container a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+
+  border-radius: 50%;
+  /* 定义 2D 缩放转换。 */
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: 1;
+  /* 
+  filter 属性定义了元素(通常是<img>)的可视效果(例如：模糊与饱和度)。 
+  blur(px)给图像设置高斯模糊。"radius"一值设定高斯函数的标准差，或者是屏幕上以多少像素融在一起，所以值越大越模糊；
+  如果没有设定值，则默认是0；这个参数可设置css长度值，但不接受百分比值。
+  */
+  filter:blur(3px)
+}
+
+.container a:hover::before {
+  transform: scale(1);
+  bottom: -15px;
+}
