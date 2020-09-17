@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>81.滑块百分比的有趣应用</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <h2 id="rangeValue"></h2>
+      <div id="fillRangeValue"></div>
+
+      <!-- ! type="range" =====> 滑块控件 -->
+      <!-- ! onchange函数：滑动停止时h2显示最后数值 -->
+      <!-- ! onmousemove函数：滑动中h2显示数值 -->
+      <input
+        type="range"
+        class="range"
+        value="0"
+        ,min="0"
+        max="100"
+        onmousemove="rangeSlider(this.value)"
+        onchange="rangeSlider(this.value)"
+      />
+    </div>
+
+    <script>
+      function rangeSlider(value) {
+        document.getElementById('rangeValue').innerHTML = value
+        document.getElementById('fillRangeValue').style.width = `${value}%`
+      }
+    </script>
+  </body>
+</html>
