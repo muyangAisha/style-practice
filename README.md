@@ -3,6 +3,7 @@
 ## Gradients - 渐变
 
 1. folder1 - CSS渐变按钮悬停效果
+2. foloder2 - CSS实现炫酷Loading动画
 
 
 ## Slides - 滑块
