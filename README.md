@@ -15,6 +15,10 @@
 1. folder1 - 3D视频立方体特效
 2. folder2 - CSS 3D背景动画效果
 
+## Other
+
+1. folder1 - 用CSS实现新拟态效果
+
 
 ## Markdown - 基础记录
 
