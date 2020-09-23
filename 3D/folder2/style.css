@@ -21,7 +21,8 @@ section {
       scale：定义 2D 缩放转换。
       rotate：定义 2D 旋转，在参数中规定角度
      */
-    transform: scale(0.1) rotate(-15deg);
+    /* transform: scale(0.1) rotate(-15deg); */
+    transform: scale(1.6) rotate(-15deg);
   }
 
   50% {
