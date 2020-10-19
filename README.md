@@ -6,8 +6,8 @@
 ## Gradients - 渐变
 
 1. folder1 - [CSS渐变按钮悬停效果](https://muyangaisha.github.io/style-practice/Gradients/folder1/test.html)
-2. foloder2 - [CSS实现炫酷Loading动画](https://muyangaisha.github.io/style-practice/Gradients/folder2/test.html)
-
+2. folder2 - [CSS实现炫酷Loading动画](https://muyangaisha.github.io/style-practice/Gradients/folder2/test.html)
+3. folder3 - [CSS列表项悬停特效](https://muyangaisha.github.io/style-practice/Gradients/folder3/test.html)
 
 ## Slides - 滑块
 
@@ -27,3 +27,4 @@
 
 - animation - 动画效果
 - regexp - 正则表达式
+- jest - jest单元测试
