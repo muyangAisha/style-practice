@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网格布局（Grid）是最强大的 CSS 布局方案</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a
+      href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html"
+      target="_blank"
+    >
+      <h1>网格布局（Grid）是最强大的 CSS 布局方案</h1>
+    </a>
+    <hr />
+    <h2>与flex的区别</h2>
+    <ul>
+      <li>
+        Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以看作是一维布局。
+      </li>
+      <li>
+        Grid
+        布局则是将容器划分成"行"和"列"，产生单元格，然后指定"项目所在"的单元格，可以看作是二维布局。Grid
+        布局远比 Flex 布局强大。
+      </li>
+    </ul>
+    <hr />
+    <h2>基本概念</h2>
+    <ul>
+      <li>
+        1.
+        最外层的div元素称为"容器"（container）,内层的顶级div子元素称为"项目"（item）。
+      </li>
+      <li>
+        2. 容器里面的水平区域称为"行"（row），垂直区域称为"列"（column）。
+      </li>
+      <li>
+        3.
+        行和列的交叉区域，称为"单元格"（cell）。正常情况下，3行3列会产生9个单元格（n
+        * m => 3*3=9）
+      </li>
+      <li>
+        4. 划分网格的线，称为"网格线"（grid line）。正常情况下，4 * 4
+        的网格，共有5根水平网格线和5根垂直网格线。
+      </li>
+    </ul>
+    <hr />
+    <h2>容器属性</h2>
+    <h3>display</h3>
+    <ul>
+      <li>display: grid ===> 默认情况下，容器元素 = 块级元素</li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example1</h4>
+      </li>
+      <li>
+        <div class="example1">
+          <span>foo</span>
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+          <span>bar</span>
+        </div>
+      </li>
+      <li>display: inline-grid ===> 容器元素 = 行内元素</li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example2</h4>
+      </li>
+      <li>
+        <div class="example2">
+          <span>foo</span>
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+          <span>bar</span>
+        </div>
+      </li>
+      <li style="color: red">
+        注意，设为网格布局以后，容器子元素（项目item）的float、display:
+        inline-block、display:
+        table-cell、vertical-align和column-*等设置都将失效。
+      </li>
+    </ul>
+    <hr />
+    <h3>grid-template-columns 和 grid-template-rows</h3>
+
+    <ul>
+      <li>
+        grid-template-columns 属性定义每一列的<span style="color: red"
+          >列宽</span
+        >，可以是绝对单位(100px)，也可以是百分比(33.33%)
+      </li>
+      <li>
+        grid-template-rows 属性定义每一行的<span style="color: red">行高</span
+        >，可以是绝对单位(100px)，也可以是百分比(33.33%)
+      </li>
+      <hr />
+      <li style="color: red">
+        repeat()函数，网格很多,复写同样的值非常麻烦 ===> repeat(3,
+        33.33%)，第一个参数是重复的次数（上例是3），后面参数是所要重复的值
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example3</h4>
+      </li>
+      <li>
+        <div class="example3">
+          <span
+            >repeat(2, 100px 20px 80px) ===>
+            第一列和第四列的宽度为100px，第二列和第五列为20px，第三列和第六列为80px.</span
+          >
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+        </div>
+      </li>
+      <hr />
+      <li style="color: red">
+        auto-fill 表示自动填充（浏览器缩放可查看样式），grid-template-columns:
+        repeat(auto-fill, 100px);
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example4</h4>
+      </li>
+      <li>
+        <div class="example4">
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+        </div>
+      </li>
+      <li style="color: red">
+        auto-fit和auto-fill的区别：是在容器中元素数量*元素的最小宽度<容器的总宽度时才会显示看到的差异，如果元素数量*最小宽度>容器宽度，那么auto-fill和auto-fit展现的效果是一样的
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example5:</h4>
+      </li>
+      <li>
+        <div class="example5">
+          <span>auto-fill的最后一步时保留空轨道留白，不会折叠空轨道</span>
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+          </div>
+          <span style="color: red; display: inline-block">
+            gap属性是用来设置网格行与列之间的间隙（gutters），该属性是row-gap
+            and column-gap的简写形式。
+          </span>
+          <hr />
+          <span style="color: red; display: inline-block">
+            minmax()函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。
+          </span>
+        </div>
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example6:</h4>
+      </li>
+      <li>
+        <div class="example6">
+          <span
+            >auto-fit的最后一步是，折叠空轨道，将空轨道的空间全部平均分配给已有元素的轨道</span
+          >
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+          </div>
+        </div>
+      </li>
+      <li style="color: red">
+        fr关键字：宽度分别为1fr和2fr，就表示后者是前者的两倍。
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example7:</h4>
+      </li>
+      <li>
+        <div class="example7">
+          <span>第一列的宽度为150像素，第二列的宽度是第三列的一半。</span>
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+        </div>
+      </li>
+      <li style="color: red">
+        auto关键字：表示由浏览器自己决定长度
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example8:</h4>
+      </li>
+      <li>
+        <div class="example8">
+          <span>grid-template-columns: 100px auto 100px;第二列的宽度，基本上等于该列单元格的最大宽度;</span>
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+        </div>
+      </li>
+      <li style="color: red">
+        网格线的名称：grid-template-columns 和 grid-template-rows 使用方括号，指定每一根网格线的名字，方便以后的引用。
+      </li>
+      <li>
+        <h4 style="background-color: #000; color: #fff">example9:</h4>
+      </li>
+      <li>
+        <div class="example9">
+          <span>grid-template-columns: [c1] 100px [c2] 100px [c3] auto [c4];grid-template-rows: [r1] 100px [r2] 100px [r3] auto [r4];</span>
+          <div id="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item item-8">8</div>
+            <div class="item item-9">9</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
