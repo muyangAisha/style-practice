@@ -1,0 +1,452 @@
+.example1 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example1 span {
+  font-size: 2em;
+}
+
+.example1 #container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+}
+
+.example1 #container .item {
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+.example1 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example1 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example1 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example1 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example1 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example1 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example1 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example1 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example1 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
+
+.example2 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example2 span {
+  font-size: 2em;
+}
+
+.example2 #container {
+  display: inline-grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+}
+
+.example2 #container .item {
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+.example2 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example2 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example2 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example2 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example2 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example2 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example2 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example2 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example2 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
+
+.example3 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example3 #container {
+  display: grid;
+  grid-template-columns: repeat(2, 100px 20px 80px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.example3 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example3 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example3 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example3 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example3 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example3 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example3 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example3 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example3 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example3 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
+
+.example4 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example4 #container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.example4 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example4 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example4 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example4 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example4 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example4 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example4 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example4 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example4 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example4 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
+
+.example5 {
+  display: block;
+  width: 900px;
+  background-color: #000;
+  color: #fff;
+}
+
+.example5 #container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* gap 属性是用来设置网格行与列之间的间隙（gutters），该属性是row-gap and column-gap的简写形式。 */
+  gap: 10px;
+}
+
+.example5 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example5 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example5 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example5 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example6 {
+  display: block;
+  width: 900px;
+  background-color: #000;
+  color: #fff;
+}
+
+.example6 #container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* gap 属性是用来设置网格行与列之间的间隙（gutters），该属性是row-gap and column-gap的简写形式。 */
+  gap: 10px;
+}
+
+.example6 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example6 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example6 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example6 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example7 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example7 #container {
+  display: grid;
+  grid-template-columns: 150px 1fr 2fr;
+}
+
+.example7 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example7 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example7 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example7 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example7 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example7 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example7 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example7 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example7 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example7 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
+
+.example8 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example8 #container {
+  display: grid;
+  grid-template-columns: 100px auto 100px;;
+}
+
+.example8 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example8 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example8 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example8 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example8 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example8 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example8 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example8 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example8 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example8 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
+
+.example9 {
+  display: block;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.example9 #container {
+  display: grid;
+  grid-template-columns: [c1] 100px [c2] 100px [c3] auto [c4];
+  grid-template-rows: [r1] 100px [r2] 100px [r3] auto [r4];
+}
+
+.example9 #container .item {
+  font-size: 4em;
+  text-align: center;
+  border: 1px solid #e5e4e9;
+}
+
+.example9 #container .item.item-1 {
+  background-color: #ef342a;
+}
+
+.example9 #container .item.item-2 {
+  background-color: #f68f26;
+}
+
+.example9 #container .item.item-3 {
+  background-color: #4ba946;
+}
+
+.example9 #container .item.item-4 {
+  background-color: #0376c2;
+}
+
+.example9 #container .item.item-5 {
+  background-color: #c077af;
+}
+
+.example9 #container .item.item-6 {
+  background-color: #f8d29d;
+}
+
+.example9 #container .item.item-7 {
+  background-color: #b5a87f;
+}
+
+.example9 #container .item.item-8 {
+  background-color: #d0e4a9;
+}
+
+.example9 #container .item.item-9 {
+  background-color: #4dc7ec;
+}
