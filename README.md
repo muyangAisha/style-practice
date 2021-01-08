@@ -28,4 +28,3 @@
 - animation - [动画效果(待添加属性)](https://www.w3school.com.cn/css3/css3_animation.asp)
 - regexp - 正则表达式
 - jest - jest单元测试
-
