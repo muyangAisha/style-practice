@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.wavy {
+    position: relative;
+    /*  
+        chrome,safari,移动端浏览器
+        倒影 -webkit-box-reflect ：
+        方位：[ above 向上 | below 向下 | right | left ]? 
+        偏移量：<length>? 可以是数值，也可以是百分比
+        遮罩层：<image>? （1）url
+                        （2）linear-gradient线性渐变创建遮罩图像。
+                        （3）repeating-linear-gradient重复线性渐变创建遮罩图像。
+                        （4）repeating-url重复径向径向渐变创建遮罩图像。
+    */
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, .2));
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    animation: animate 1.3s ease-in-out infinite;
+    animation-delay: calc(.1s*var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-24px)
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px)
+    }
+}
