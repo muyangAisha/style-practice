@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>123.火箭发射特效</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="rocket">
+        <img src="./rocket.png" alt="rocket" />
+      </div>
+    </div>
+    <script>
+      (function stars() {
+        let count = 20;
+        let scene = document.querySelector(".scene");
+        let i = 0;
+        while (i < count) {
+          let star = document.createElement("i");
+          star.style.width = 1 + "px";
+
+          let x = Math.floor(Math.random() * window.innerWidth);
+          star.style.left = x + "px";
+
+          let h = Math.random() * 100;
+          star.style.height = h + "px";
+
+          let duration = Math.random() * 1;
+          star.style.animationDuration = duration + "s";
+
+          scene.appendChild(star);
+          i++;
+        }
+      })();
+    </script>
+  </body>
+</html>

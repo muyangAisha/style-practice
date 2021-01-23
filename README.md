@@ -21,7 +21,8 @@
 ## Other
 
 1. folder1 - [用CSS实现新拟态效果](https://muyangaisha.github.io/style-practice/Other/folder1/test.html)
-1. folder2 - [波浪文本动画特效](https://muyangaisha.github.io/style-practice/Other/folder2/test.html)
+2. folder2 - [波浪文本动画特效](https://muyangaisha.github.io/style-practice/Other/folder2/test.html)
+3. folder3 - [123.火箭发射特效](https://muyangaisha.github.io/style-practice/Other/folder3/test.html)
 
 
 ## Markdown - 基础记录
