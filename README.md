@@ -9,7 +9,7 @@
 2. folder2 - [CSS实现炫酷Loading动画](https://muyangaisha.github.io/style-practice/Gradients/folder2/test.html)
 3. folder3 - [CSS列表项悬停特效](https://muyangaisha.github.io/style-practice/Gradients/folder3/test.html)
 4. folder4 - [酷炫box-shadow悬停特效](https://muyangaisha.github.io/style-practice/Gradients/folder4/test.html)
-
+5. folder5 - [CSS按钮边框渐变发光特效](https://muyangaisha.github.io/style-practice/Gradients/folder5/test.html)
 
 ## Slides - 滑块
 
@@ -38,3 +38,4 @@
 - animation - [动画效果(待添加属性)](https://www.w3school.com.cn/css3/css3_animation.asp)
 - regexp - 正则表达式
 - jest - jest单元测试
+- websocket - websocket使用
