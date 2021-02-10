@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>125 实现鼠标移动背景视差特效</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <img src="./1.png" data-speed="-5" class="layer" />
+      <img src="./2.png" data-speed="7" class="layer" />
+      <h2 class="layer" data-speed="2">Parallax</h2>
+    </section>
+
+    <script>
+      document.addEventListener("mousemove", parallax);
+
+      function parallax(e) {
+        this.querySelectorAll(".layer").forEach((layer) => {
+          const speed = layer.getAttribute("data-speed");
+
+          const x = (window.innerWidth - e.pageX * speed) / 100;
+          const y = (window.innerWidth - e.pageY * speed) / 100;
+
+          console.log(x, y);
+
+          layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+      }
+    </script>
+  </body>
+</html>

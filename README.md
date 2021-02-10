@@ -26,12 +26,13 @@
 1. folder1 - [用CSS实现新拟态效果](https://muyangaisha.github.io/style-practice/Other/folder1/test.html)
 2. folder2 - [波浪文本动画特效](https://muyangaisha.github.io/style-practice/Other/folder2/test.html)
 3. folder3 - [火箭发射特效](https://muyangaisha.github.io/style-practice/Other/folder3/test.html)
-
+4. folder4 - [mix-blend-mode 黑色变透明](https://muyangaisha.github.io/style-practice/Other/folder4/test.html)
 
 ## JS
 
 1. folder1 - [CSS加JS实现背景拼图动画效果](https://muyangaisha.github.io/style-practice/JS/folder1/test.html)
-1. folder2 - [Jquery.countdown 实现倒计时](https://muyangaisha.github.io/style-practice/JS/folder2/test.html)
+2. folder2 - [Jquery.countdown 实现倒计时](https://muyangaisha.github.io/style-practice/JS/folder2/test.html)
+3. folder3- [实现鼠标移动背景视差特效](https://muyangaisha.github.io/style-practice/JS/folder3/test.html)
 
 ## Markdown - 基础记录
 
